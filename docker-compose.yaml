@@ -2,6 +2,9 @@ version: "3"
 services:
   app:
     # build: 从当前路径构建镜像
-    build: .
+    build: 
+      context: .
+      # 指定DockerFile文件
+      dockerfile: nginx.Dockerfile
     ports:
-      - 3000:3000
+      - 4000:80
